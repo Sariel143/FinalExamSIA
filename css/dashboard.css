@@ -1,0 +1,173 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #4CAF50;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.hamburger {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  width: 25px;
+}
+
+.hamburger div {
+  background-color: white;
+  height: 3px;
+  width: 100%;
+  border-radius: 2px;
+}
+
+/* Menu Styles */
+.menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 1000;
+  animation: slide-down 0.3s ease;
+}
+
+.menu.show {
+  display: block;
+}
+
+.menu button, .menu a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+  text-align: left;
+  background-color: white;
+  border: none;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.menu button:hover, .menu a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Profile Section Styles (User Dashboard) */
+#profile {
+  padding: 1rem;
+  background-color: white;
+  margin: 1rem auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+
+#profile h2 {
+  margin-bottom: 1rem;
+  color: #4CAF50;
+  text-align: center;
+}
+
+#profile p {
+  margin: 0.5rem 0;
+}
+
+/* Table Styles (Admin Dashboard) */
+#userList {
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#userList h2 {
+  margin-bottom: 1rem;
+  color: #4CAF50;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+table th, table td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Button Styles */
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Animations */
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
